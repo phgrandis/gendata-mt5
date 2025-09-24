@@ -2,14 +2,7 @@
 
 Sistema de coleta e agendamento de dados de mercado via MetaTrader 5.
 
-## 🔧 Funcionalidades
-
-- Coleta de OHLC, Ticks e DOM via MT5
-- Salvamento direto em `.parquet`
-- Agendador containerizado via Docker
-- Separação entre coleta local e ingestão distribuída
-
-## ⚙️ Funcionalidades implementadas
+## Descrição do projeto
 
 ✅ Coletor local via MT5 (main.py)
     * Conecta ao terminal MT5
@@ -31,12 +24,38 @@ Sistema de coleta e agendamento de dados de mercado via MetaTrader 5.
     * Agendamento e ingestão: containerizado, multiplataforma
     * Stub de coleta para ambientes sem MT5
 
-## 🧠 Padrões adotados
+🧠 Padrões adotados
     * Salvamento direto em .parquet (sem duplicação)
     * Estrutura de pastas por ativo e data
     * Modularização por tipo de coleta
     * Logs claros e rastreáveis
 
+
+## 🔧 Funcionalidades
+
+- Coleta de OHLC, Ticks e DOM via MT5
+- Salvamento direto em `.parquet`
+- Agendador containerizado via Docker
+- Separação entre coleta local e ingestão distribuída
+
+## 🚀 Como rodar localmente
+
+```Bash
+# Ativar ambiente virtual
+.\.env\Scripts\Activate.ps1
+
+# Instalar dependências
+pip install -r requirements.mt5.txt
+
+# Rodar coleta
+python main.py
+```
+## 🐳 Como usar o Docker
+
+```Bash
+docker-compose build
+docker-compose up
+```
 ## 🗂 Estrutura
 
 ```Estrutura
@@ -62,22 +81,5 @@ gendata-mt5/
 │       └── ohlc_scheduler.py       # Agendador containerizado
 ```
 
-## 🚀 Como rodar
-
-```Bash
-# Ativar ambiente virtual
-.\.env\Scripts\Activate.ps1
-
-# Instalar dependências
-pip install -r requirements.mt5.txt
-
-# Rodar coleta
-python main.py
-```
-## 🐳 Docker
-```Bash
-docker-compose build
-docker-compose up
-```
-
+# Status atual e próximos passos
 
