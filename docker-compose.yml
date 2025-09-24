@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  agendador:
+    build:
+      context: .
+      dockerfile: Dockerfile.agendador
+    volumes:
+      - ./data:/app/data
+    restart: always
