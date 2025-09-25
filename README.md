@@ -81,5 +81,5 @@ gendata-mt5/
 │       └── ohlc_scheduler.py       # Agendador containerizado
 ```
 
-# Status atual e próximos passos
+## Status atual e próximos passos
 
