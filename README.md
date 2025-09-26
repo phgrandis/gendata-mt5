@@ -45,7 +45,11 @@ Sistema de coleta e agendamento de dados de mercado via MetaTrader 5.
 .\.env\Scripts\Activate.ps1
 
 # Instalar dependências
-pip install -r requirements.mt5.txt
+# coletor MT5
+pip install -r requirements.base.txt -r requirements.windows.txt
+
+#pipeline/processamento
+pip install -r requirements.base.txt -r requirements.linux.txt
 
 # Rodar coleta
 python main.py

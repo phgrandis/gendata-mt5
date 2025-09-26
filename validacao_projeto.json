@@ -1,0 +1,168 @@
+{
+  "estrutura": {
+    "arquivos_raiz": [
+      "docker-compose.yml",
+      "Dockerfile",
+      "requirements.txt",
+      "README.md"
+    ],
+    "diretorios": [
+      "src",
+      "docs"
+    ],
+    "mapa_completo": {
+      "airflow/": {},
+      "data/": {
+        "clean/": {
+          "mt5_clean.duckdb": "arquivo (1585152 bytes)"
+        },
+        "dom_ITUB4_snapshot.csv": "arquivo (18 bytes)",
+        "dom_PETR4_snapshot.csv": "arquivo (18 bytes)",
+        "dom_VALE3_snapshot.csv": "arquivo (18 bytes)",
+        "dom_WINV25_snapshot.csv": "arquivo (18 bytes)",
+        "gold/": {},
+        "raw/": {
+          "ohlc/": {
+            "ITUB4/": {},
+            "PETR4/": {},
+            "VALE3/": {},
+            "WINV25/": {}
+          },
+          "ticks/": {
+            "ITUB4/": {},
+            "PETR4/": {},
+            "VALE3/": {},
+            "WINV25/": {}
+          }
+        }
+      },
+      "docker/": {},
+      "docker-compose.yml": "arquivo (174 bytes)",
+      "Dockerfile": "arquivo (141 bytes)",
+      "Dockerfile.agendador": "arquivo (193 bytes)",
+      "dockerignore": "arquivo (73 bytes)",
+      "docs/": {},
+      "gendata-mt5.zip": "arquivo (149864769 bytes)",
+      "main.py": "arquivo (2844 bytes)",
+      "orchestrator/": {
+        "airflow/": {
+          ".env": "arquivo (19 bytes)",
+          "config/": {},
+          "dags/": {
+            "gendata_dag.py": "arquivo (771 bytes)",
+            "gendata_mt5_pipeline.py": "arquivo (880 bytes)",
+            "scripts/": {},
+            "__pycache__/": {}
+          },
+          "docker-compose.yml": "arquivo (10940 bytes)",
+          "logs/": {},
+          "plugins/": {},
+          "requirements.txt": "arquivo (0 bytes)"
+        }
+      },
+      "README.md": "arquivo (2798 bytes)",
+      "requirements.base.txt": "arquivo (131 bytes)",
+      "requirements.mt5.txt": "arquivo (125 bytes)",
+      "requirements.txt": "arquivo (90 bytes)",
+      "run_pipeline.py": "arquivo (1227 bytes)",
+      "src/": {
+        "collectors/": {
+          "ohlc_collector.py": "arquivo (1514 bytes)",
+          "ohlc_collector_mt5.py": "arquivo (1514 bytes)",
+          "ohlc_collector_stub.py": "arquivo (362 bytes)",
+          "tickdom_collector.py": "arquivo (1990 bytes)",
+          "__init__.py": "arquivo (0 bytes)",
+          "__pycache__/": {}
+        },
+        "contract_identifier.py": "arquivo (2117 bytes)",
+        "data_collector.py": "arquivo (458 bytes)",
+        "ingest/": {
+          "clean_dom.py": "arquivo (682 bytes)",
+          "clean_ohlc.py": "arquivo (480 bytes)",
+          "clean_ticks.py": "arquivo (417 bytes)",
+          "duckdb_session.py": "arquivo (122 bytes)",
+          "utils.py": "arquivo (523 bytes)",
+          "__pycache__/": {}
+        },
+        "mt5_connector.py": "arquivo (465 bytes)",
+        "run_validate.py": "arquivo (419 bytes)",
+        "scheduler/": {
+          "ohlc_scheduler.py": "arquivo (1649 bytes)",
+          "__init__.py": "arquivo (0 bytes)"
+        },
+        "storage/": {
+          "__init__.py": "arquivo (0 bytes)"
+        },
+        "validate/": {
+          "validate_duckdb.py": "arquivo (321 bytes)",
+          "validate_parquet.py": "arquivo (1150 bytes)",
+          "__pycache__/": {}
+        },
+        "__init__.py": "arquivo (0 bytes)",
+        "__pycache__/": {}
+      },
+      "tests/": {},
+      "validacao_projeto.json": "arquivo (406063 bytes)",
+      "validate_project.py": "arquivo (12854 bytes)"
+    }
+  },
+  "docker": {
+    "compose_file": "docker-compose.yml",
+    "compose_valid": true,
+    "dockerfiles": [
+      "Dockerfile",
+      "Dockerfile.agendador"
+    ],
+    "docker_installed": true
+  },
+  "python": {
+    "dependency_files": [
+      "requirements.txt"
+    ],
+    "requirements": [
+      "duckdb==1.4.0",
+      "MetaTrader5==5.0.5260",
+      "pandas==2.3.2",
+      "schedule==1.2.2",
+      "SQLAlchemy==2.0.43"
+    ],
+    "python_files": [
+      "main.py",
+      "run_pipeline.py",
+      "validate_project.py",
+      "orchestrator\\airflow\\dags\\gendata_dag.py",
+      "orchestrator\\airflow\\dags\\gendata_mt5_pipeline.py",
+      "orchestrator\\airflow\\dags\\scripts\\ingest_postgres.py",
+      "orchestrator\\airflow\\dags\\scripts\\main.py",
+      "orchestrator\\airflow\\dags\\scripts\\run_validate.py",
+      "src\\contract_identifier.py",
+      "src\\data_collector.py",
+      "src\\mt5_connector.py",
+      "src\\run_validate.py",
+      "src\\__init__.py",
+      "src\\collectors\\ohlc_collector.py",
+      "src\\collectors\\ohlc_collector_mt5.py",
+      "src\\collectors\\ohlc_collector_stub.py",
+      "src\\collectors\\tickdom_collector.py",
+      "src\\collectors\\__init__.py",
+      "src\\ingest\\clean_dom.py",
+      "src\\ingest\\clean_ohlc.py",
+      "src\\ingest\\clean_ticks.py",
+      "src\\ingest\\duckdb_session.py",
+      "src\\ingest\\utils.py",
+      "src\\scheduler\\ohlc_scheduler.py",
+      "src\\scheduler\\__init__.py",
+      "src\\storage\\__init__.py",
+      "src\\validate\\validate_duckdb.py",
+      "src\\validate\\validate_parquet.py"
+    ],
+    "virtual_env": false
+  },
+  "configuracoes": {
+    "arquivos": []
+  },
+  "problemas": [],
+  "recomendacoes": [
+    "Considere criar um ambiente virtual Python"
+  ]
+}

@@ -1,0 +1,12 @@
+# Ignore sensitive files and local-only directories
+.env
+.venv
+venv
+
+# Data / outputs
+data
+logs
+
+.git
+__pycache__/
+*.pyc
